@@ -1,0 +1,26 @@
+{
+    "name": "znframework/package-console",
+    "description": "ZN Framework Console Package",
+    "license": "MIT",
+    "homepage": "https://znframework.com",
+    "keywords": ["znframework", "console"],
+    "authors": [
+        {
+            "name": "Ozan Uykun",
+            "email": "ozan@znframework.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "znframework/package-zerocore": "5.0.*",
+        "znframework/package-cache": "5.0.*",
+        "znframework/package-generator": "5.0.*",
+        "znframework/package-crontab": "5.0.*"
+	},
+    "autoload": {
+        "psr-4": {
+            "ZN\\Console\\": ""
+        }
+    },
+	"minimum-stability": "dev"
+}
