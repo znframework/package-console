@@ -14,6 +14,8 @@ use ZN\Buffering;
 
 class Result
 {
+    protected $title = 'Result';
+
     /**
      * Magic constructor
      * 
@@ -70,7 +72,7 @@ class Result
         echo $line;
         echo $this->title();                                                                                         
         echo $line;
-        echo '| ' . $this->return . ' |'.EOL;
+        echo $this->content();
         echo $line;
     }
 
@@ -79,7 +81,13 @@ class Result
      */
     protected function line()
     {
-        return '+' . str_repeat('-', strlen($this->return)) . '--+' . EOL;
+        return '+' . str_repeat
+        (
+            '-', 
+            (($returnLength = strlen($this->return)) < ($titleLength = (strlen($this->title))) 
+                                                     ? $titleLength 
+                                                     : $returnLength
+            )) . '--+' . EOL;
     }
 
     /**
@@ -87,8 +95,26 @@ class Result
      */
     protected function title()
     {
-        $result = ' Result';
+        return '| '.$this->title.' ' . str_repeat
+        (
+            ' ', 
+            ($returnLength = strlen($this->return)) >= ($titleLength = strlen($this->title)) 
+                                                    ? $returnLength - $titleLength
+                                                    : 0
+            ) . '|' . EOL;
+    }
 
-        return '| Result ' . str_repeat(' ', strlen($this->return) - strlen($result)) . ' |' . EOL;
+    /**
+     * Protected Content
+     */
+    protected function content()
+    {
+        return '| ' . $this->return . str_repeat
+        (
+            ' ', 
+            (($returnLength = strlen($this->return)) < ($titleLength = strlen($this->title)) 
+                                                     ? $titleLength - $returnLength + 1
+                                                     : 1
+            )) . '|'.EOL;
     }
 }
