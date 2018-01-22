@@ -13,6 +13,10 @@ use Crontab;
 use ZN\Structure;
 use ZN\IS;
 
+/**
+ * @command run-cron
+ * @description run-cron command:method func param func param ...\n
+ */
 class Cron
 {
     /**

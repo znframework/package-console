@@ -11,6 +11,10 @@
 
 use Generate;
 
+/**
+ * @command create-controller
+ * @description create-controller controller name 
+ */
 class CreateController
 {
     /**

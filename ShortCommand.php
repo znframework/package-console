@@ -11,6 +11,10 @@
 
 use ZN\Singleton;
 
+/**
+ * @command command:method
+ * @description Run short command 
+ */
 class ShortCommand
 {
     /**
@@ -43,7 +47,7 @@ class ShortCommand
         {
             $class = PROJECT_COMMANDS_NAMESPACE . $classEx[0];
         }
-
+        
         new Result( Singleton::class($class)->$function(...$parameters) );
     }
 }

@@ -43,9 +43,7 @@ class Run
      */
     public function __construct($commands)
     {
-        Helper::report('TerminalCommands', implode(' ', $commands), 'TerminalCommands');
-
-        $realCommands = implode(' ', self::arrayRemoveFirst($commands, 3));
+        Helper::report('TerminalCommands', implode(' ', $commands), 'TerminalCommands'); 
 
         array_shift($commands);
 
@@ -54,6 +52,8 @@ class Run
             array_unshift($commands, DEFAULT_PROJECT);
             array_unshift($commands, 'project-name');
         }
+
+        $realCommands = implode(' ', self::arrayRemoveFirst($commands, 2));
 
         self::$project = $commands[1] ?? DEFAULT_PROJECT;
         $command       = $commands[2] ?? NULL;

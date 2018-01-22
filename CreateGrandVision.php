@@ -12,6 +12,10 @@
 use ZN\Config;
 use Generate;
 
+/**
+ * @command create-grand-vision
+ * @description create-grand-vision [database name]
+ */
 class CreateGrandVision
 {
     /**

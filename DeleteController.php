@@ -11,6 +11,10 @@
 
 use Generate;
 
+/**
+ * @command delete-controller
+ * @description delete-controller controller name 
+ */
 class DeleteController
 {
     /**

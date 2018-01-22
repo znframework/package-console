@@ -9,6 +9,10 @@
  * @author  Ozan UYKUN [ozan@znframework.com]
  */
 
+/**
+ * @command run-function
+ * @description run-function function p1 p2 ... pN
+ */
 class Method
 {
     /**

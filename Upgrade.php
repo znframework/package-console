@@ -11,6 +11,10 @@
 
 use ZN\ZN;
 
+/**
+ * @command upgrade
+ * @description upgrade
+ */
 class Upgrade
 {
     /**

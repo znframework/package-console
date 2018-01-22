@@ -11,6 +11,10 @@
 
 use ZN\Restoration;
 
+/**
+ * @command start-restoration
+ * @description start-restoration project name [full, standart or [directories]] 
+ */
 class StartRestoration
 {
     /**

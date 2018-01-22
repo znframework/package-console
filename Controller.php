@@ -13,6 +13,10 @@ use ZN\Base;
 use ZN\Structure;
 use ZN\Singleton;
 
+/**
+ * @command run-controller 
+ * @description run-controller controller/function/p1/p2/.../pN  
+ */
 class Controller
 {
     /**

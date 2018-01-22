@@ -11,6 +11,10 @@
 
 use ZN\Filesystem;
 
+/**
+ * @command delete-project
+ * @description delete-project project name
+ */
 class DeleteProject
 {
     /**
@@ -22,6 +26,6 @@ class DeleteProject
      */
     public function __construct($command)
     {   
-        new Result(Filesystem::deleteFolder(PROJECTS_DIR . $command));
+        new Result(Filesystem\Forge::deleteFolder(PROJECTS_DIR . $command));
     }
 }

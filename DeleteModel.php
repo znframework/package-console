@@ -11,6 +11,10 @@
 
 use Generate;
 
+/**
+ * @command delete-model
+ * @description delete-model model name
+ */
 class DeleteModel
 {
     /**

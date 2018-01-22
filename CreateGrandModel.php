@@ -11,6 +11,10 @@
 
 use Generate;
 
+/**
+ * @command create-grand-model
+ * @description create-grand-model model name
+ */
 class CreateGrandModel
 {
     /**

@@ -11,6 +11,10 @@
 
 use ZN\ZN;
 
+/**
+ * @command upgrade-files
+ * @description upgrade-files
+ */
 class UpgradeFiles
 {
     /**

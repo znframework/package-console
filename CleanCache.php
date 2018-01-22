@@ -11,6 +11,10 @@
 
 use Cache;
 
+/**
+ * @command clean-cache 
+ * @description clean-cache 
+ */
 class CleanCache
 {
     /**

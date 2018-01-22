@@ -11,6 +11,10 @@
 
 use Crontab;
 
+/**
+ * @command remove-cron
+ * @description remove-cron cronID  
+ */
 class RemoveCron
 {
     /**

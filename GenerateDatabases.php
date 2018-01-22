@@ -11,6 +11,10 @@
 
 use Generate;
 
+/**
+ * @command generate-databases  
+ * @description generate-databases  
+ */
 class GenerateDatabases
 {
     /**

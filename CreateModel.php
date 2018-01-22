@@ -11,6 +11,10 @@
 
 use Generate;
 
+/**
+ * @command create-model
+ * @description create-model model name 
+ */
 class CreateModel
 {
     /**

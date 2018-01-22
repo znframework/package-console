@@ -11,6 +11,10 @@
 
 use ZN\Singleton;
 
+/**
+ * @command run-command / run-external-command
+ * @description run-command command:function p1 p2 ...pN
+ */
 class Library
 {
     /**

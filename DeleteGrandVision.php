@@ -12,6 +12,10 @@
 use ZN\Config;
 use Generate;
 
+/**
+ * @command delete-grand-vision
+ * @description delete-grand-vision [database name] 
+ */
 class DeleteGrandVision
 {
     /**

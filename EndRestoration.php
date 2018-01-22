@@ -11,6 +11,10 @@
 
 use ZN\Restoration;
 
+/**
+ * @command end-restoration
+ * @description end-restoration project name  
+ */
 class EndRestoration
 {
     /**

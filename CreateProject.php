@@ -11,6 +11,10 @@
 
 use Generate;
 
+/**
+ * @command create-project
+ * @description create-project project name 
+ */
 class CreateProject
 {
     /**
