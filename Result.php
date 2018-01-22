@@ -10,6 +10,7 @@
  */
 
 use ZN\Lang;
+use ZN\Buffering;
 
 class Result
 {
@@ -22,48 +23,72 @@ class Result
      */
     public function __construct($result)
     {
-        echo '+-------------------------------------------------------------------------------------------------------+' . EOL;
-        echo '| RESULT                                                                                                |' . EOL;
-        echo '+-------------------------------------------------------------------------------------------------------+' . EOL;
 
-        $success = Lang::select('Success', 'success');
-        $error   = Lang::select('Error', 'error');
-        $nodata  = 'No Data';
-
-        if( $result === true || $result === NULL )
+        $this->return = Buffering\Callback::do(function() use($result)
         {
-            echo $success;
-        }
-        elseif( $result === false )
-        {
-            echo $error;
-        }
-        else
-        {
-            if( is_array($result) )
+            $success = Lang::select('Success', 'success');
+            $error   = Lang::select('Error', 'error');
+            $nodata  = 'No Data';
+    
+            if( $result === true || $result === NULL )
             {
-                if( ! empty($result) )
-                {
-                    print_r($result);
-                }
-                else
-                {
-                    echo $nodata;
-                }
+                echo $success;
+            }
+            elseif( $result === false )
+            {
+                echo $error;
             }
             else
             {
-                if( ! empty($result) )
+                if( is_array($result) )
                 {
-                    echo $result;
+                    if( ! empty($result) )
+                    {
+                        print_r($result);
+                    }
+                    else
+                    {
+                        echo $nodata;
+                    }
                 }
                 else
                 {
-                    echo $nodata;
+                    if( ! empty($result) )
+                    {
+                        echo $result;
+                    }
+                    else
+                    {
+                        echo $nodata;
+                    }
                 }
             }
-        }
+        });
 
-        echo EOL . '+-------------------------------------------------------------------------------------------------------+' . EOL;
+        $line = $this->line();
+
+        echo $line;
+        echo $this->title();                                                                                         
+        echo $line;
+        echo '| ' . $this->return . ' |'.EOL;
+        echo $line;
+    }
+
+    /**
+     * Protected Line
+     */
+    protected function line()
+    {
+        return '+' . str_repeat('-', strlen($this->return)) . '--+' . EOL;
+    }
+
+    /**
+     * Protected Title
+     */
+    protected function title()
+    {
+        $result = ' Result';
+
+        return '| Result ' . str_repeat(' ', strlen($this->return) - strlen($result)) . ' |' . EOL;
     }
 }

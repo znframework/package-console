@@ -16,7 +16,8 @@
         "znframework/package-cache": "5.0.*",
         "znframework/package-generator": "5.0.*",
         "znframework/package-crontab": "5.0.*",
-        "znframework/package-helpers": "5.0.*"
+        "znframework/package-helpers": "5.0.*",
+        "znframework/package-buffering": "5.0.*"
 	},
     "autoload": {
         "psr-4": {
