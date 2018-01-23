@@ -25,7 +25,6 @@ class Result
      */
     public function __construct($result)
     {
-
         $this->return = Buffering\Callback::do(function() use($result)
         {
             $success = Lang::select('Success', 'success');
@@ -47,6 +46,8 @@ class Result
                     if( ! empty($result) )
                     {
                         print_r($result);
+
+                        $this->print = 'array';
                     }
                     else
                     {
@@ -66,6 +67,11 @@ class Result
                 }
             }
         });
+
+        if( isset($this->print) )
+        {
+            exit($this->return);
+        }
 
         $line = $this->line();
 
