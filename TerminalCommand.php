@@ -22,6 +22,6 @@ class TerminalCommand
     {   
         exec($realCommands, $response); 
         
-        new Result($response);
+        new Result($response[0] ?? false);
     }
 }
