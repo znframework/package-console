@@ -78,8 +78,6 @@ class Run
             case 'run-command'           : new Library(self::$command, self::$parameters, PROJECT_COMMANDS_NAMESPACE); break;
             case 'run-external-command'  : new Library(self::$command, self::$parameters, EXTERNAL_COMMANDS_NAMESPACE); break;
             case 'run-function'          : new Method(self::$command, self::$parameters); break;
-            case 'upgrade'               : new Upgrade; break;
-            case 'upgrade-files'         : new UpgradeFiles; break;
             case 'start-restoration'     : new StartRestoration(self::$command, self::$parameters); break;
             case 'end-restoration'       : new EndRestoration(self::$command); break;
             case 'end-restoration-delete': new EndRestorationDelete(self::$command); break;
