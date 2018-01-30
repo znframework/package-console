@@ -10,7 +10,6 @@
  */
 
 use Crontab;
-use ZN\Structure;
 use ZN\IS;
 
 /**
