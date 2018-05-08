@@ -15,7 +15,7 @@ use ZN\Butcher;
  * @command extract-butcher-delete
  * @description extract-butcher-delete [all|{name}] [title|lower|slug|normal|{name}]
  */
-class ExtractButcherForce
+class ExtractButcherDelete
 {
     /**
      * Magic constructor
