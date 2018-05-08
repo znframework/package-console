@@ -12,20 +12,26 @@
 use ZN\Butcher;
 
 /**
- * @command run-butcher-delete
- * @description run-butcher-delete [theme-directory-name] [project|external]
+ * @command extract-butcher-force
+ * @description extract-butcher-force [all|{name}] [title|lower|slug|normal|{name}]
  */
-class RunButcherDelete
+class ExtractButcherForce
 {
     /**
      * Magic constructor
      * 
      * @param string $command
+     * @param array  $parameters
      * 
      * @return void
      */
     public function __construct($command, $parameters)
     {   
-        new Result((new Butcher)->runDelete($command ?? 'Default', $parameters[0] ?? 'project'));
+        new Result((new Butcher)->extractForce
+        (
+            $command       ?? 'all', 
+            $parameters[0] ?? 'title', 
+            $parameters[1] ?? 'project'
+        ));
     }
 }
