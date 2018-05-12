@@ -12,10 +12,10 @@
 use ZN\Butcher;
 
 /**
- * @command extract-butcher
- * @description extract-butcher [all|{name}] [title|lower|slug|normal|{name}]
+ * @command extract-butcher-delete
+ * @description extract-butcher-delete [all|{name}] [title|lower|slug|normal|{name}]
  */
-class ExtractButcher
+class ExtractButcherDelete
 {
     /**
      * Magic constructor
@@ -27,7 +27,7 @@ class ExtractButcher
      */
     public function __construct($command, $parameters)
     {   
-        new Result((new Butcher)->extract
+        new Result((new Butcher)->extractDelete
         (
             $command       ?? 'all', 
             $parameters[0] ?? 'title', 
