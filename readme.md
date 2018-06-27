@@ -31,7 +31,7 @@ Click for <a href="https://docs.znframework.com/yerel-servisler/konsol-komutlari
 
 ZN\ZN::run();
 ```
-After the steps above, you can use commands from the console.
 ```bash
+# After the steps above, you can use commands from the console.
 php zerocore command-list
 ```
