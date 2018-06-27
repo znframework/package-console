@@ -9,7 +9,7 @@ You only need to run the following code for the installation.
 </p>
 
 ```
-composer require znframework/package-image
+composer require znframework/package-console
 ```
 
 <h3>Documentation</h3>
