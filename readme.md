@@ -20,9 +20,9 @@ Click for <a href="https://docs.znframework.com/yerel-servisler/konsol-komutlari
 <h3>Usage Steps</h3>
 <p>
 <ul>
-<li>Move to the root directory of the "zerocore" file in the package.</li>
-<li>Change the name of the zeroneed.php file in the "zerocore" file to index.php.</li>
-<li>Edit the contents of the index.php file as follows.</li>
+<li>Move to the root directory of the <code>zerocore</code> file in the package.</li>
+<li>Change the name of the <code>zeroneed.php</code> file in the <code>zerocore</code> file to index.php.</li>
+<li>Edit the contents of the  <code>index.php</code> file as follows.</li>
 </ul>
 </p>
 
